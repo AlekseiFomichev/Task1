@@ -24,7 +24,7 @@ Console.WriteLine($"Расстояние между точками равно: {
 int InsertPosition(string text)
 {
     Console.WriteLine(text);
-    int pos = Convert.ToInt32(Console.ReadLine);
+    int pos = Convert.ToInt32(Console.ReadLine());
     return pos;
 }
 
