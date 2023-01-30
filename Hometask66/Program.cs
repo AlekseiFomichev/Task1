@@ -2,32 +2,15 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int InsertDigit(string text) //Метод пользовательского ввода для целых чисел
+Console.WriteLine("Введите число M");
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число N");
+int numberB = Convert.ToInt32(Console.ReadLine());
+
+int SumNumbers(int numA, int numB)
 {
-    int result; bool parse;
-    Console.WriteLine(text);
-    parse = Int32.TryParse(Console.ReadLine(), out result);
-    if (!parse) result = InsertDigit(text);//Если пользователь ввел некорректное значение вызываем повтороно метод.
-    return result;
+    if(numB == numA) return 0;
+    return  (numB + numA)*(numB - numA +1)/2 ;  //формула суммы членов арифметической прогрессии
 }
-
-
-void IntegerNumbers(int n, int m, int s)
-{
-    if (n == m)
-    {
-        Console.Write($"{n} ");
-        return;
-    }
-    IntegerNumbers(n + s, m, s);
-
-    Console.Write($"{n} ");
-}
-
-int mUser = InsertDigit("Введите число N:");
-int nUser = InsertDigit("Введите число M:");
-
-int sign=Math.Sign((mUser-nUser));
-Console.WriteLine($"sign = {sign}");
-
-IntegerNumbers(nUser, mUser, sign);
+int num = SumNumbers(numberA, numberB);
+Console.WriteLine($"M = {numberA}; N = {numberB} -> {num}");
