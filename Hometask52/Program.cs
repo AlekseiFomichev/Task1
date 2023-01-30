@@ -12,9 +12,7 @@ double[] avaragecolumns = GetAvarageFromColumns(test, roundto: 1);
 Console.Write("Среднее арифметическое каждого столбца:");
 PrintArrayDouble(avaragecolumns);
 
-// Methods
 
-// Create Matrix with Random Numbers from min to max
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
@@ -29,7 +27,6 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     return matrix;
 }
 
-// Print int Matrix
 void PrintIntMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
